@@ -1,6 +1,7 @@
 package com.rentcars.model;
 
 import com.rentcars.base.BaseEntity;
+import com.rentcars.model.customer.Customer;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.NoArgsConstructor;
@@ -11,6 +12,7 @@ import java.util.Date;
 @NoArgsConstructor
 @AllArgsConstructor
 @Entity
+@Table(name = "rental")
 public class Rental extends BaseEntity {
 
 

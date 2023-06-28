@@ -1,14 +1,17 @@
 package com.rentcars.base;
 
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
+import jakarta.persistence.*;
 
+@MappedSuperclass
 public abstract class BaseEntity {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
+    @Column(name = "id")
+    protected Long id;
+
+    public BaseEntity() {
+    }
 
 
     public Long getId() {

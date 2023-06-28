@@ -1,13 +1,14 @@
-package com.rentcars.model;
+package com.rentcars.model.customer;
 
 import com.rentcars.base.BaseEntity;
+import com.rentcars.model.Address;
+import com.rentcars.model.customer.dto.CreateCustomer;
 import jakarta.persistence.CascadeType;
 import jakarta.persistence.Entity;
 import jakarta.persistence.OneToOne;
 import lombok.AllArgsConstructor;
 import lombok.NoArgsConstructor;
 import org.hibernate.Hibernate;
-import org.springframework.beans.factory.annotation.Autowired;
 
 import java.util.Objects;
 
@@ -25,6 +26,14 @@ public class Customer extends BaseEntity {
 
     @OneToOne(cascade = CascadeType.ALL)
     private Address address;
+
+    public Customer(CreateCustomer dto) {
+        this.name = dto.getName();
+        this.telephone = dto.getTelephone();
+        this.email = dto.getTelephone();
+        this.password = dto.getPassword();
+        this.cpf = dto.getPassword();
+    }
 
 
     public Address getAddress() {

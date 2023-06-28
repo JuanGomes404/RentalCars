@@ -8,6 +8,7 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @NoArgsConstructor
 @Entity
+@Table(name = "vehicle")
 public class Vehicle extends BaseEntity {
 
     private String model;

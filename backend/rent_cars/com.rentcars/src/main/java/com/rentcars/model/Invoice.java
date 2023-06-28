@@ -12,6 +12,7 @@ import java.util.Date;
 @NoArgsConstructor
 @AllArgsConstructor
 @Entity
+@Table(name = "invoice")
 public class Invoice extends BaseEntity {
 
     @OneToOne
